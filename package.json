@@ -5,9 +5,10 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
+    "watch": "webpack --watch --config webpack.dev.js",
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "dev": "cross-env NODE_ENV=development webpack --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "webpack-cli": "^3.3.6",
     "webpack-dev-middleware": "^3.7.0",
     "webpack-dev-server": "^3.7.2",
+    "webpack-manifest-plugin": "^2.0.4",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
