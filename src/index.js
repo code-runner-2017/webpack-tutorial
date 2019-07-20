@@ -1,6 +1,10 @@
 import './style.css';
 import './style2.css';
 
+// require("file-loader!./index.html");
+// require('file-loader?name=index.html!./index.html');
+
+
 class Shape {
   constructor (id, x, y) {
     this.id = id
